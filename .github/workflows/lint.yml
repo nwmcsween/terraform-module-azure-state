@@ -30,4 +30,56 @@ jobs:
         uses: super-linter/super-linter@v7
         env:
           # To report GitHub Actions status checks
+          ENFORCE_COMMITLINT_CONFIGURATION_CHECK: 'true'
+          FIX_ANSIBLE: ${{ vars.SUPERLINTER_FIX }}
+          FIX_CLANG_FORMAT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_CSHARP: ${{ vars.SUPERLINTER_FIX }}
+          FIX_CSS_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_CSS: ${{ vars.SUPERLINTER_FIX }}
+          FIX_DOTNET_SLN_FORMAT_ANALYZERS: ${{ vars.SUPERLINTER_FIX }}
+          FIX_DOTNET_SLN_FORMAT_STYLE: ${{ vars.SUPERLINTER_FIX }}
+          FIX_DOTNET_SLN_FORMAT_WHITESPACE: ${{ vars.SUPERLINTER_FIX }}
+          FIX_ENV: ${{ vars.SUPERLINTER_FIX }}
+          FIX_GO_MODULES: ${{ vars.SUPERLINTER_FIX }}
+          FIX_GO: ${{ vars.SUPERLINTER_FIX }}
+          FIX_GOOGLE_JAVA_FORMAT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_GRAPHQL_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_GROOVY: ${{ vars.SUPERLINTER_FIX }}
+          FIX_HTML_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JAVASCRIPT_ES: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JAVASCRIPT_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JAVASCRIPT_STANDARD: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JSON_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JSON: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JSONC_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JSONC: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JSX_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JSX: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JUPYTER_NBQA_BLACK: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JUPYTER_NBQA_ISORT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_JUPYTER_NBQA_RUFF: ${{ vars.SUPERLINTER_FIX }}
+          FIX_MARKDOWN_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_MARKDOWN: ${{ vars.SUPERLINTER_FIX }}
+          FIX_POWERSHELL: ${{ vars.SUPERLINTER_FIX }}
+          FIX_PROTOBUF: ${{ vars.SUPERLINTER_FIX }}
+          FIX_PYTHON_BLACK: ${{ vars.SUPERLINTER_FIX }}
+          FIX_PYTHON_ISORT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_PYTHON_PYINK: ${{ vars.SUPERLINTER_FIX }}
+          FIX_PYTHON_RUFF: ${{ vars.SUPERLINTER_FIX }}
+          FIX_RUBY: ${{ vars.SUPERLINTER_FIX }}
+          FIX_RUST_2021: ${{ vars.SUPERLINTER_FIX }}
+          FIX_RUST_CLIPPY: ${{ vars.SUPERLINTER_FIX }}
+          FIX_SCALAFMT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_SHELL_SHFMT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_SHFMT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_SNAKEMAKE_SNAKEFMT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_SQLFLUFF: ${{ vars.SUPERLINTER_FIX }}
+          FIX_TERRAFORM_FMT: ${{ vars.SUPERLINTER_FIX }}
+          FIX_TSX: ${{ vars.SUPERLINTER_FIX }}
+          FIX_TYPESCRIPT_ES: ${{ vars.SUPERLINTER_FIX }}
+          FIX_TYPESCRIPT_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_TYPESCRIPT_STANDARD: ${{ vars.SUPERLINTER_FIX }}
+          FIX_VUE_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
+          FIX_YAML_PRETTIER: ${{ vars.SUPERLINTER_FIX }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RUN_LOCAL: ${{ vars.SUPERLINTER_RUN_LOCAL }}
