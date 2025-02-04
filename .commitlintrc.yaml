@@ -1,24 +1,11 @@
-version: v0.9.0
-formatter: default
+extends:
+  - '@commitlint/config-conventional'
 rules:
-  - header-min-length
-  - header-max-length
-  - body-max-line-length
-  - footer-max-line-length
-  - type-enum
-severity:
-  default: error
-settings:
-  body-max-line-length:
-    argument: 72
-  footer-max-line-length:
-    argument: 72
-  header-min-length:
-    argument: 10
-  header-max-length:
-    argument: 50
+  header-max-length: [1, 'always', 72]
   type-enum:
-    argument:
+    - 2
+    - always
+    - - ci
       - feat
       - fix
       - docs
@@ -26,7 +13,17 @@ settings:
       - refactor
       - perf
       - test
-      - build
-      - ci
-      - chore
       - revert
+      - chore
+help: |
+  **Possible types**:
+  `ci`:       Changes to our CI configuration files and scripts (example scopes: Travis, Circle CI, BrowserStack, SauceLabs)
+  `feat`:     Adds a new feature.
+  `fix`:      Solves a bug.
+  `docs`:     Adds or alters documentation. (example scopes: readme, worker, code_of_conduct, contributors)
+  `style`:    Improves formatting, white-space.
+  `refactor`: Rewrites code without feature, performance or bug changes.
+  `perf`:     Improves performance.
+  `test`:     Adds or modifies tests. (example scopes: functionals, unit-tests)
+  `revert`:   Changes that reverting other changes
+  `chore`:    No production code change. Updating grunt tasks etc;
