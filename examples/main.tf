@@ -1,6 +1,7 @@
 data "azurerm_client_config" "main" {}
 
 resource "azurerm_resource_group" "main" {
+  #ts:skip=AC_AZURE_0389
   name     = "rg-terraform"
   location = "Canada Central"
 }
