@@ -1,7 +1,7 @@
 variable "backend_filename" {
   description = "(Required) The backend filename."
   type        = string
-  default     = "terraform-backend.tf"
+  default     = "backend.tf"
 }
 
 variable "backend_config_filename" {
@@ -10,7 +10,7 @@ variable "backend_config_filename" {
 }
 
 resource "local_file" "backend" {
-  filename = "${path.root}/backend.tf"
+  filename = "${path.root}/${var.backend_filename}"
   content  = <<-EOT
   # This is a generated partial backend configuration file.
   terraform {
@@ -29,5 +29,4 @@ resource "local_file" "backend-config" {
   key                  = "terraform.tfstate"
   EOT
 }
-
 
