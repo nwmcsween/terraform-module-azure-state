@@ -6,3 +6,4 @@ registries:
 packages:
   - name: nektos/act@v0.2.72
   - name: rhysd/actionlint@v1.7.7
+  - name: evilmartians/lefthook@v1.10.10

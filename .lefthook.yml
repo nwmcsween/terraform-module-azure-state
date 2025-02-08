@@ -11,4 +11,4 @@ pre-commit:
       run: aqua exec -- actionlint {staged_files}
     lint:
       tags: lint
-      run: aqua exec -- act pull_request --action-offline-mode --var SUPERLINTER_RUN_LOCAL="true" --var SUPERLINTER_FIX="true"
+      run: aqua exec -- act pull_request --platform catthehacker/ubuntu:act-latest --action-offline-mode --var SUPERLINTER_RUN_LOCAL="true" --var SUPERLINTER_FIX="true"
